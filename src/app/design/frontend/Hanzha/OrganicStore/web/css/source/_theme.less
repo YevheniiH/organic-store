@@ -20,6 +20,10 @@
 @icons__font-path: '@{baseDir}fonts/Luma-Icons';
 @icons__font-name: 'luma-icons';
 
+@font-family-merriweather: Merriweather;
+@font-family__serif: 'Open Sans', Georgia, 'Times New Roman', Times, serif;
+@font-family__base: @font-family-merriweather, @font-family__serif;
+
 //  Color nesting
 @panel__background-color: @color-gray-light0;
 @border-color__base: @color-gray80;
@@ -108,8 +112,11 @@
 //
 //  Buttons
 //  ---------------------------------------------
-
+@button__font-family: @font-family__serif;
 @button__font-weight: @font-weight__semibold;
+
+//  Display settings
+@button__border-radius: 5px;
 
 //  Default = secondary button
 @button__background: @color-gray-darken0;
@@ -120,8 +127,15 @@
 
 //  Primary button
 @button-primary__hover__color: @color-white;
-@button-primary__active__background: @link__hover__color;
-@button-primary__active__border: 1px solid @link__hover__color;
+
+@button-primary__border: 1px solid @color-os-olive;
+@button-primary__background: @color-os-olive;
+
+@button-primary__hover__background: @color-os-lime;
+@button-primary__hover__border: 1px solid @color-os-lime;
+
+@button-primary__active__background: @color-os-olive;
+@button-primary__active__border: 1px solid @color-os-olive;
 @button-primary__active__color: @color-white;
 
 //  Button with icon

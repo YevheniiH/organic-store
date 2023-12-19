@@ -13,11 +13,14 @@
     files: [ 'css/styles-m', 'css/styles-l' ],
     dsl: 'less'
   },
-    jangle: {
+    organicStore:{
         area: 'frontend',
-        name: 'Batoh/Jangle',
+        name: 'Hanzha/OrganicStore',
         locale: 'en_US',
-        files: [ 'css/styles-m', 'css/styles-l' ],
+        files: [
+            'css/styles-m',
+            'css/styles-l'
+        ],
         dsl: 'less'
     },
   backend: {

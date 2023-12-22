@@ -1,5 +1,9 @@
 <?php
-
+/**
+ * Copyright © Batoh Andrii, All rights reserved.
+ * See COPYING.txt for license details.
+ * @author Yevhenii Hanzha <evgenijganza369@gmail.com>
+ */
 /**
  * @var \Magento\Customer\Block\Account\AuthorizationLink $block
  * @var \Magento\Framework\Escaper $escaper
@@ -9,7 +13,8 @@ if ($block->isLoggedIn()) {
     $dataPostParam = sprintf(" data-post='%s'", $block->getPostParams());
 }
 ?>
-<li class="link authorization-link <?= /* @noEscape */ $block->isLoggedIn() ? 'abs-visually-hidden' : ''?>">
+<li class="link authorization-link">
     <a class="customer-link" <?= /* @noEscape */ $block->getLinkAttributes() ?>
-        <?= /* @noEscape */ $dataPostParam ?>><?= $escaper->escapeHtml($block->getLabel()) ?><i class="fa fa-user"></i></a>
+        <?= /* @noEscape */ $dataPostParam ?>><i class="fa fa-user"></i>
+    </a>
 </li>

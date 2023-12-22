@@ -1,13 +1,13 @@
 <?php
 /**
- * Copyright © Magento, Inc. All rights reserved.
+ * Copyright © Batoh Andrii, All rights reserved.
  * See COPYING.txt for license details.
+ * @author Yevhenii Hanzha <evgenijganza369@gmail.com>
  */
-
 /** @var Magento\Customer\Block\Account\Customer $block */
 ?>
 <?php if ($block->customerLoggedIn()) : ?>
-    <li class="customer-welcome">
+    <li class="customer-welcome test">
         <span class="customer-name"
               role="link"
               tabindex="0"
@@ -19,7 +19,7 @@
                     class="action switch"
                     tabindex="-1"
                     data-action="customer-menu-toggle">
-                <span><?= $block->escapeHtml(__('Change')) ?></span>
+                <i class="fa fa-user"></i><span class="customer-label"><?= $block->escapeHtml(__('Change')) ?></span>
             </button>
         </span>
         <script type="text/x-magento-init">

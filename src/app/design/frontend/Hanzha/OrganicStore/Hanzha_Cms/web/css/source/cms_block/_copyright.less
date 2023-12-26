@@ -1,0 +1,68 @@
+// /**
+//* Copyright © Batoh Andrii, All rights reserved.
+//* See COPYING.txt for license details.
+//* @author Yevhenii Hanzha <evgenijganza369@gmail.com>
+//  */
+// /**
+//* Copyright © Batoh Andrii, All rights reserved.
+//* See COPYING.txt for license details.
+//* @author Yevhenii Hanzha <evgenijganza369@gmail.com>
+//  */
+& when (@media-common = true) {
+    .page-wrapper {
+        .copyright {
+            .lib-font-size(16);
+            .lib-vendor-box-align(center);
+            .lib-vendor-prefix-display();
+            background: @color-os-black1;
+            border-top: 1px solid @color-os-white-transparent;
+            color: @color-os-white-transparent;
+            font-weight: @font-weight__light;
+            justify-content: space-between;
+            padding: 30px;
+
+            ul.social-icons {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+
+                li {
+                    display: inline-block;
+                    margin: 0 12px;
+
+                    a {
+                        .lib-font-size(16);
+                        color: @color-os-white-transparent;
+                        text-decoration: none;
+
+                        &:hover {
+                            color: @color-os-olive;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
+    .page-wrapper {
+        .copyright {
+            .lib-font-size(12);
+            .lib-vendor-prefix-flex-direction();
+            background: @color-os-black1;
+            flex-direction: column;
+            justify-content: center;
+            padding: 30px 25px;
+
+            ul.social-icons {
+                margin-top: 30px;
+
+                li a {
+                    .lib-font-size(12);
+                }
+            }
+        }
+    }
+}
+

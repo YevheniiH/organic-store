@@ -12,9 +12,7 @@
         }
 
         .pagebuilder-column-group.footer-wrapper {
-            .area-first,
-            .area-second,
-            .area-third {
+            .pagebuilder-column {
                 h4 {
                     color: @color-os-white;
                     font-weight: @font-weight__regular;
@@ -130,6 +128,19 @@
 }
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__s) {
+    #html-body {
+        .pagebuilder-column-line {
+            &:first-child {
+                width: 50%;
+            }
+
+            &:nth-child(2),
+            &:last-child {
+                width: 25%;
+            }
+        }
+    }
+
     .page-footer {
         .footer.content {
             display: none;
@@ -139,20 +150,7 @@
             .lib-vendor-prefix-display();
             padding: 45px 20px;
 
-            .pagebuilder-column-line {
-                &:first-child {
-                    width: 50% !important;
-                }
-
-                &:nth-child(2),
-                &:last-child {
-                    width: 25% !important;
-                }
-            }
-
-            .area-first,
-            .area-second,
-            .area-third {
+            .pagebuilder-column {
                 margin: 0 10px;
 
                 h4 {

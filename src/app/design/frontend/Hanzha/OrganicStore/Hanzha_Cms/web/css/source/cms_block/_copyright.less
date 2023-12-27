@@ -3,11 +3,6 @@
 //* See COPYING.txt for license details.
 //* @author Yevhenii Hanzha <evgenijganza369@gmail.com>
 //  */
-// /**
-//* Copyright © Batoh Andrii, All rights reserved.
-//* See COPYING.txt for license details.
-//* @author Yevhenii Hanzha <evgenijganza369@gmail.com>
-//  */
 & when (@media-common = true) {
     .page-wrapper {
         .copyright {
@@ -22,9 +17,11 @@
             padding: 30px;
 
             ul.social-icons {
+                .lib-vendor-prefix-display();
+                justify-content: space-between;
                 list-style: none;
-                padding: 0;
                 margin: 0;
+                padding: 0;
 
                 li {
                     display: inline-block;
@@ -51,12 +48,12 @@
             .lib-font-size(12);
             .lib-vendor-prefix-flex-direction();
             background: @color-os-black1;
-            flex-direction: column;
             justify-content: center;
             padding: 30px 25px;
 
             ul.social-icons {
                 margin-top: 30px;
+                justify-content: center;
 
                 li a {
                     .lib-font-size(12);
@@ -65,4 +62,3 @@
         }
     }
 }
-

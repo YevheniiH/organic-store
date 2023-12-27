@@ -3,12 +3,7 @@
  * Copyright © Magento, Inc. All rights reserved.
  * See COPYING.txt for license details.
  */
-
-/** @var \Magento\Framework\View\Element\Template $block */
-$blockId = 'copyright_block';
-$cmsBlock = $block->getLayout()->createBlock(\Magento\Cms\Block\Block::class)->setBlockId($blockId);
 ?>
 <small class="copyright">
     <span><?= $block->escapeHtml($block->getCopyright()) ?></span>
-    <?php echo $cmsBlock->toHtml(); ?>
 </small>

@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Batoh Andrii, All rights reserved.
+ * See COPYING.txt for license details.
+ * @author Yevhenii Hanzha <evgenijganza369@gmail.com>
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="header.links">
+            <block class="Magento\Customer\Block\Account\Customer" name="customer" template="Magento_Customer::account/customer.phtml" before="-"/>
+            <referenceBlock name="authorization-link-login" template="Magento_Customer::account/link/authorization_extend.phtml"/>
+            <referenceBlock name="register-link">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">Register</argument>
+                    <argument name="class" xsi:type="string" translate="true">register</argument>
+                </arguments>
+            </referenceBlock>
+        </referenceBlock>
+        <move element="header" destination="header.links" before="-"/>
+        <move element="register-link" destination="header.links"/>
+        <move element="top.links" destination="customer"/>
+        <move element="authorization-link" destination="top.links" after="-"/>
+    </body>
+</page>

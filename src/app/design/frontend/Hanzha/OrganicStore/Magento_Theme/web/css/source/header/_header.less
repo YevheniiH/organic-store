@@ -1,0 +1,199 @@
+// /**
+//* Copyright © Batoh Andrii, All rights reserved.
+//* See COPYING.txt for license details.
+//* @author Yevhenii Hanzha <evgenijganza369@gmail.com>
+//  */
+& when (@media-common = true) {
+    .page-header .panel.wrapper {
+        background-color: @color-os-white;
+        border-bottom: none;
+    }
+
+    .header.panel {
+        > .header.links {
+            .register,
+            .greet.welcome {
+                display: none;
+            }
+        }
+    }
+
+    .panel.header {
+        .lib-vendor-box-align (center);
+        .lib-vendor-prefix-display();
+        justify-content: space-between;
+        padding-bottom: 0;
+
+        .navigation {
+            background: @color-os-white;
+
+            .level0.parent {
+                > .level-top > .ui-menu-icon:after {
+                    display: none;
+                }
+            }
+
+            ul {
+                padding: 0;
+
+                li {
+                    margin: 0;
+
+                    a {
+                        span {
+                            color: @color-os-black3;
+                            font-weight: @font-weight__light;
+                        }
+
+                        span.ui-menu-icon:after {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        .about-contact-container {
+            .lib-vendor-prefix-display();
+            justify-content: space-evenly;
+            order: 2;
+            width: 20%;
+
+            .block-cms-link {
+                margin: 10px;
+
+                a {
+                    color: @color-os-black3;
+                    font-weight: @font-weight__light;
+                }
+            }
+        }
+
+        .minicart-wrapper {
+            order: 3;
+            width: 3%;
+            margin-top: 0;
+
+            .action.showcart {
+                .lib-vendor-prefix-display();
+                .lib-vendor-box-align (center);
+                position: relative;
+
+                &:before {
+                    order: 2;
+                    color: @color-os-lime;
+                    overflow: unset;
+                }
+
+                .subtotal {
+                    order: 1;
+
+                    .label {
+                        display: none;
+                    }
+
+                    .price-wrapper .price {
+                        color: @color-os-black;
+                    }
+                }
+
+                .counter.qty {
+                    background: @color-os-lime;
+                    border-radius: 50%;
+                    height: 18px;
+                    line-height: normal;
+                    margin: 0;
+                    order: 3;
+                    position: absolute;
+                    right: -12px;
+                    top: -8px;
+                    width: 18px;
+
+                    .counter-number {
+                        color: @color-os-black;
+                        font-size: 16px;
+                        text-shadow: none;
+                    }
+                }
+            }
+        }
+
+        .header.links {
+            float: none;
+            margin: 0;
+            order: 4;
+            width: 3%;
+
+            .authorization-link {
+                .customer-link i {
+                    color: @color-os-black;
+                }
+            }
+        }
+    }
+
+    .logo {
+        margin: 0 auto 0 0;
+        max-width: 25%;
+        z-index: 0;
+    }
+}
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    .page-header {
+        .panel.wrapper {
+            .panel.header {
+                padding: 10px;
+
+                .about-contact-container {
+                    width: auto;
+                }
+            }
+
+            .nav-toggle{
+                .lib-vendor-box-align(center);
+                .lib-vendor-prefix-display();
+                justify-content: center;
+                background: @color-os-lime;
+                height: 41px;
+                margin-left: 30px;
+                order: 5;
+                position: static;
+                width: 41px;
+
+                &:before {
+                    color: @color-os-white;
+                }
+            }
+        }
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .page-header .panel.wrapper {
+        background-color: @color-os-white;
+        border-bottom:  none;
+
+        .nav-sections {
+            .lib-vendor-prefix-display();
+            background: @color-os-white;
+            margin: 0;
+            order: 1;
+            width: 55%;
+        }
+
+        .minicart-wrapper .block-minicart {
+            background: @color-os-beige;
+        }
+
+        .logo {
+            margin: 0 auto 0 0;
+        }
+
+        .header.panel > .header.links{
+            > .authorization-link:after {
+                display: none;
+            }
+        }
+    }
+}
+

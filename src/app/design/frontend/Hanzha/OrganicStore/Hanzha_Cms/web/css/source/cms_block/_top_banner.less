@@ -1,0 +1,120 @@
+// /**
+//* Copyright © Batoh Andrii, All rights reserved.
+//* See COPYING.txt for license details.
+//* @author Yevhenii Hanzha <evgenijganza369@gmail.com>
+//  */
+& when (@media-common = true) {
+    .os-top-banner {
+        width: 100vw;
+        position: relative;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+        margin-bottom: 55px;
+
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+            background: linear-gradient(to top, transparent 0%, rgba(248, 246, 243, 0.9)), url("@{baseDir}images/leaves-free-bg-img.png") no-repeat bottom right;
+            background-size: 28% auto;
+        }
+
+        .top-banner-wrapper {
+            .top-banner-content {
+                padding-left: 40px;
+
+                .title-top-banner {
+                    font-weight: @font-weight__bold;
+                    color: @color-os-black;
+                }
+
+                p {
+                    font-family: @font-family__serif;
+                    font-weight: @font-weight__light;
+                }
+
+                a {
+                    .lib-font-size(14);
+                    font-family: @font-family__serif;
+                    font-weight: @font-weight__light;
+                    text-transform: uppercase;
+                    padding: 12px 34px;
+
+                    i {
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    #html-body .os-top-banner {
+        .pagebuilder-column-line {
+            flex-direction: column-reverse;
+
+            .pagebuilder-column {
+                width: 100%;
+            }
+        }
+    }
+
+    .os-top-banner {
+        .top-banner-wrapper {
+            padding: 60px 20px;
+
+            .top-banner-img {
+                margin-top: 40px;
+            }
+
+            .top-banner-content {
+                padding-left: 0;
+                text-align: center;
+
+                .subtitle-top-banner {
+                    margin-top: 0;
+                }
+
+                .title-top-banner {
+                    margin-bottom: 20px;
+                }
+
+                p {
+                    .lib-font-size(14);
+                }
+
+                a {
+                    margin-top: 30px;
+                }
+            }
+        }
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .os-top-banner {
+        .top-banner-wrapper {
+            padding: 80px 30px;
+
+            .top-banner-content {
+                padding-left: 40px;
+
+                .title-top-banner {
+                    margin-bottom: 20px;
+                }
+
+                p {
+                    .lib-font-size(16);
+                }
+            }
+        }
+    }
+}

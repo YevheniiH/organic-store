@@ -1,0 +1,159 @@
+// /**
+//* Copyright © Batoh Andrii, All rights reserved.
+//* See COPYING.txt for license details.
+//* @author Yevhenii Hanzha <evgenijganza369@gmail.com>
+//  */
+& when (@media-common = true) {
+    .functions-section-block {
+        .functions-section-wrapper {
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+            margin-bottom: 55px;
+
+            &:before {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                z-index: -1;
+                background: @color-os-black;
+            }
+
+            .functions-section {
+                .functions-list {
+                    list-style: none;
+                    margin: 0;
+
+                    .function-item {
+                        background: @color-os-black3;
+                        border-radius: 3px;
+
+                        a {
+                            color: @color-os-white;
+                            font-weight: @font-weight__regular;
+                            text-decoration: none;
+
+                            i {
+                                color: @color-os-lime;
+                            }
+                        }
+
+                        p {
+                            color: @color-os-white;
+                            font-family: @font-family__serif;
+                            font-weight: @font-weight__light;
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    .functions-section {
+        padding: 0 20px;
+
+        .functions-list {
+            padding: 0 10px;
+
+            .function-item {
+                padding: 20px 10px;
+                margin: 20px auto;
+                display: block;
+
+                a {
+                    .lib-font-size(16);
+                    .lib-vendor-prefix-flex-direction(column);
+                    .lib-vendor-prefix-display();
+                    margin-bottom: 5px;
+
+                    i {
+                        margin-bottom: 5px;
+                        .lib-font-size(30);
+                    }
+                }
+
+                p {
+                    .lib-font-size(14);
+                }
+            }
+        }
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .functions-section {
+        padding: 20px;
+
+        .functions-list {
+            padding: 0 30px;
+            .lib-vendor-prefix-display();
+            flex-flow: row wrap;
+            justify-content: space-around;
+
+            .function-item {
+                padding: 20px 10px;
+                margin: 0;
+                width: 45%;
+
+                a {
+                    .lib-font-size(20);
+
+                    i {
+                        margin-right: 18px;
+                        padding-left: 40px;
+                        float: left;
+                        height: 47px;
+                    }
+                }
+
+                p {
+                    .lib-font-size(16);
+                }
+
+            }
+
+            .function-item:first-child,
+            .function-item:nth-child(2) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
+    .functions-section {
+        padding: 35px 0;
+
+        .functions-list {
+            padding: 0 20px;
+            flex-flow: row;
+
+            .function-item {
+                width: 21%;
+
+                a i {
+                    .lib-font-size(24);
+                    padding-left: 20px;
+                    height: 77px;
+                }
+            }
+
+            .function-item:first-child,
+            .function-item:nth-child(2),
+            .function-item:nth-child(3) {
+                margin-bottom: 0;
+                margin-right: 20px;
+            }
+        }
+    }
+}

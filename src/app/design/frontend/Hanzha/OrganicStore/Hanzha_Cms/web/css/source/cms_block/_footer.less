@@ -1,0 +1,203 @@
+// /**
+//* Copyright © Batoh Andrii, All rights reserved.
+//* See COPYING.txt for license details.
+//* @author Yevhenii Hanzha <evgenijganza369@gmail.com>
+//  */
+& when (@media-common = true) {
+    #html-body .page-footer{
+        background: @color-os-black1;
+    }
+
+    .page-footer {
+        .footer.content {
+            display: none;
+        }
+
+        .pagebuilder-column-group.footer-wrapper {
+            .pagebuilder-column {
+                h4 {
+                    color: @color-os-white;
+                    font-weight: @font-weight__regular;
+                }
+
+                p {
+                    color: @color-os-white-transparent;
+                    font-family: @font-family__serif;
+                    font-weight: @font-weight__light;
+                }
+
+                ul {
+                    list-style: none;
+                    padding: 0;
+
+                    li a {
+                        color: @color-os-white-transparent;
+                        font-weight: @font-weight__light;
+                        text-decoration: none;
+
+                        &:hover {
+                            color: @color-os-white;
+                        }
+                    }
+                }
+            }
+
+            .area-first {
+                p {
+                    font-family: @font-family__serif;
+                    font-style: @font-style__emphasis;
+                    font-weight: @font-weight__heavy;
+                }
+            }
+
+            .area-third {
+                ul li a {
+                    color: @color-os-lime;
+                    font-family: @font-family__serif;
+                    text-decoration: none;
+
+                    &:hover {
+                        color: @color-os-olive;
+                    }
+                }
+
+                .play {
+                    .lib-vendor-prefix-display();
+
+                    .app-store,
+                    .play-store {
+                        img {
+                            width: 100%
+                        }
+                    }
+
+                    .app-store {
+                        margin-left: 5px
+                    }
+
+                    .play-store {
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
+    .page-footer {
+        .pagebuilder-column-group.footer-wrapper {
+            padding: 65px 20px;
+
+            .area-first {
+                margin-bottom: 40px;
+
+                .logo-footer {
+                    margin: 0 auto 40px;
+                }
+
+                p {
+                    text-align: center;
+                    margin-bottom: 0;
+                }
+            }
+
+            .area-second,
+            .area-third {
+                text-align: center;
+
+                h4 {
+                    .lib-font-size(20);
+                    margin: 40px auto 15px;
+                }
+
+                p {
+                    .lib-font-size(14);
+                }
+
+                ul {
+                    li a {
+                        .lib-font-size(14);
+                    }
+                }
+            }
+
+            .play {
+                justify-content: space-around;
+            }
+        }
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__s) {
+    #html-body {
+        .pagebuilder-column-line {
+            &:first-child {
+                width: 50%;
+            }
+
+            &:nth-child(2),
+            &:last-child {
+                width: 25%;
+            }
+        }
+    }
+
+    .page-footer {
+        .footer.content {
+            display: none;
+        }
+
+        .pagebuilder-column-group.footer-wrapper {
+            .lib-vendor-prefix-display();
+            padding: 45px 20px;
+
+            .pagebuilder-column {
+                margin: 0 10px;
+
+                h4 {
+                    margin: 0 0 16px;
+                    .lib-font-size(22);
+                }
+
+                p {
+                    .lib-font-size(16);
+                }
+
+                ul {
+                    margin: 0 0 28px;
+
+                    li a {
+                        .lib-font-size(16);
+                    }
+                }
+            }
+
+            .area-first {
+                margin: 0 10px 0 0;
+
+                .logo-footer {
+                    margin-bottom: 40px;
+                }
+            }
+
+            .area-third {
+                margin: 0 0 0 10px;
+
+                p {
+                    margin: 0 0 28px;
+                }
+            }
+
+            .play {
+                justify-content: space-around;
+            }
+        }
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
+    .page-footer {
+        background: @color-os-black1;
+    }
+}

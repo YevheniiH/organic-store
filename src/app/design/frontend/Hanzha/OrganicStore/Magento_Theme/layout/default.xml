@@ -11,16 +11,24 @@
         <referenceContainer name="header.panel">
             <container name="about.contact.container" htmlClass="about-contact-container" label="About Contact Container" htmlTag="div" before="minicart"/>
         </referenceContainer>
+        <referenceContainer name="header-wrapper">
+            <block class="Magento\Cms\Block\Block" name="os.top.banner.homepage" before="-">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">os_top_banner_homepage</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
         <referenceContainer name="footer-container">
-                <block class="Magento\Cms\Block\Block" name="footer.overall.block">
-                    <arguments>
-                        <argument name="block_id" xsi:type="string">footer_overall_block</argument>
-                    </arguments>
-                </block>
-            <referenceBlock name="footer_links" remove="true" />
+            <block class="Magento\Cms\Block\Block" name="footer.overall.block">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">footer_overall_block</argument>
+                </arguments>
+            </block>
         </referenceContainer>
         <move element="page.top" destination="header.panel" after="logo"/>
         <move element="logo" destination="header.panel" before="-"/>
         <move element="breadcrumbs" destination="content.top" before="-"/>
+
+        <referenceBlock name="footer_links" remove="true" />
     </body>
 </page>

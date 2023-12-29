@@ -18,6 +18,13 @@
                 </arguments>
             </block>
         </referenceContainer>
+        <referenceContainer name="main.content">
+            <block class="Magento\Cms\Block\Block" name="functions.section.block" before="-">
+                <arguments>
+                    <argument  name="block_id" xsi:type="string">functions_section_block</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
         <referenceContainer name="footer-container">
             <block class="Magento\Cms\Block\Block" name="footer.overall.block">
                 <arguments>

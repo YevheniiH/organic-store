@@ -11,13 +11,6 @@
         <referenceContainer name="header.panel">
             <container name="about.contact.container" htmlClass="about-contact-container" label="About Contact Container" htmlTag="div" before="minicart"/>
         </referenceContainer>
-        <referenceContainer name="header-wrapper">
-            <block class="Magento\Cms\Block\Block" name="os.top.banner.homepage" before="-">
-                <arguments>
-                    <argument name="block_id" xsi:type="string">os_top_banner_homepage</argument>
-                </arguments>
-            </block>
-        </referenceContainer>
         <referenceContainer name="footer-container">
             <block class="Magento\Cms\Block\Block" name="footer.overall.block">
                 <arguments>
